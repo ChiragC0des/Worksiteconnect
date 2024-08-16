@@ -1,19 +1,19 @@
+// src/App.js
+
 import React from 'react';
-import Header from './components/Header';
-import UserList from './components/UserList';
-import UserForm from './components/UserForm';
-import useUsers from './hooks/useUsers';
 
 function App() {
-  const { users, addUser } = useUsers();
-
-  return (
-    <div className="App">
-      <Header />
-      <UserForm addUser={addUser} />
-      <UserList users={users} />
-    </div>
-  );
+    return (
+        <div className="container mt-5">
+            <div className="text-center">
+                <h1 className="text-4xl font-bold text-primary mb-4">Welcome to Work Site Connect</h1>
+                <p className="text-lg text-gray-700 mb-4">Manage and monitor your site activities effectively.</p>
+                <button className="btn btn-primary bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    );
 }
 
 export default App;

@@ -1,9 +1,12 @@
 [build]
-  base = "client"
   command = "npm run build"
   publish = "client/build"
 
+[functions]
+  directory = "netlify/functions"
+
 [[redirects]]
   from = "/api/*"
-  to = "/backend/api/:splat"
+  to = "/.netlify/functions/:splat"
   status = 200
+  force = true
